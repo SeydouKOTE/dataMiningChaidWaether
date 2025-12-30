@@ -5,6 +5,7 @@ import VariableSelector from './components/VariableSelector';
 import FilterPanel from './components/FilterPanel';
 import ContingencyTable from './components/ContingencyTable';
 import StatisticsPanel from './components/StatisticsPanel';
+import {Analytics} from "@vercel/analytics/react";
 
 function App() {
   const [selectedVar1, setSelectedVar1] = useState<string>('');
@@ -67,6 +68,7 @@ function App() {
             </>
           )}
         </main>
+        <Analytics />
       </div>
     </DataProvider>
   );
